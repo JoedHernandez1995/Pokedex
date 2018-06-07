@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -20,9 +25,39 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgN-82-n84">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucc-dm-kvC">
+                                        <rect key="frame" x="112" y="14" width="150" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="69a-0S-kqq"/>
+                                            <constraint firstAttribute="height" constant="37" id="uEc-qz-2TC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="33"/>
+                                        <color key="textColor" red="0.98809523809523814" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPl-zb-BS2">
+                                        <rect key="frame" x="331" y="25" width="36" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="cvh-3Z-ZxQ"/>
+                                            <constraint firstAttribute="width" constant="36" id="uAA-CG-YWT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="music.png"/>
+                                        <connections>
+                                            <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="97p-OS-VqR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ucc-dm-kvC" firstAttribute="leading" secondItem="SgN-82-n84" secondAttribute="leading" constant="112" id="BHW-kd-C3u"/>
+                                    <constraint firstAttribute="bottom" secondItem="FPl-zb-BS2" secondAttribute="bottom" constant="8" id="WzJ-J7-gcf"/>
+                                    <constraint firstAttribute="bottom" secondItem="ucc-dm-kvC" secondAttribute="bottom" constant="14" id="Xaw-TM-eGf"/>
+                                    <constraint firstAttribute="trailing" secondItem="ucc-dm-kvC" secondAttribute="trailing" constant="113" id="bVo-UO-ago"/>
+                                    <constraint firstItem="ucc-dm-kvC" firstAttribute="top" secondItem="SgN-82-n84" secondAttribute="top" constant="14" id="iwF-tg-BSq"/>
+                                    <constraint firstItem="ucc-dm-kvC" firstAttribute="centerX" secondItem="SgN-82-n84" secondAttribute="centerX" id="lpr-UK-TL5"/>
                                     <constraint firstAttribute="height" constant="65" id="oa0-xK-cU9"/>
+                                    <constraint firstAttribute="trailing" secondItem="FPl-zb-BS2" secondAttribute="trailing" constant="8" id="xDn-KA-fo3"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-R4-uRv">
@@ -117,5 +152,6 @@
     <resources>
         <image name="4" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music.png" width="100" height="100"/>
     </resources>
 </document>
